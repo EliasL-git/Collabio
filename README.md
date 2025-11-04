@@ -30,10 +30,16 @@ See [QUICKSTART.md](QUICKSTART.md) for the fastest way to get started!
 
 ### Docker (Recommended)
 
+**Note:** You must provide your own PostgreSQL database. The docker-compose.yml does not include PostgreSQL.
+
 ```bash
 git clone https://github.com/EliasL-git/Collabio.git
 cd Collabio
+
+# Set required environment variables
+export DATABASE_URL="postgresql://user:password@your-db-host:5432/collabio?schema=public"
 export NEXTAUTH_SECRET=$(openssl rand -base64 32)
+
 docker-compose up -d
 ```
 
@@ -123,9 +129,26 @@ Visit [http://localhost:3000](http://localhost:3000) to see the application.
 
 ### Using Docker Compose
 
-1. Update the `.env` file with your database credentials
+**Prerequisites:**
+- Docker and Docker Compose installed
+- An external PostgreSQL database (version 16+ recommended)
 
-2. Start the containers:
+**Note:** This application requires an external PostgreSQL database. The docker-compose.yml does not include a PostgreSQL service. You must provide your own database instance.
+
+1. Set up your environment variables:
+```bash
+export DATABASE_URL="postgresql://user:password@your-db-host:5432/collabio?schema=public"
+export NEXTAUTH_SECRET=$(openssl rand -base64 32)
+```
+
+Or create a `.env` file:
+```env
+DATABASE_URL="postgresql://user:password@your-db-host:5432/collabio?schema=public"
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-key-change-this-in-production-min-32-characters-long"
+```
+
+2. Start the container:
 ```bash
 docker-compose up -d
 ```
