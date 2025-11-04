@@ -2,6 +2,8 @@
 
 A modern workspace platform built with Next.js, PostgreSQL, and TypeScript - an open-source alternative to Google Workspace.
 
+📚 **[Quick Start Guide](QUICKSTART.md)** | 🤝 **[Contributing](CONTRIBUTING.md)**
+
 ## Features
 
 - 🔐 **Authentication System** - Secure user authentication with NextAuth.js
@@ -21,6 +23,21 @@ A modern workspace platform built with Next.js, PostgreSQL, and TypeScript - an 
 - **Containerization**: Docker & Docker Compose
 
 > **Note:** This project uses NextAuth.js v5 (beta) which is required for Next.js 14+ App Router compatibility. The beta version is stable enough for production use with the App Router.
+
+## Quick Start
+
+See [QUICKSTART.md](QUICKSTART.md) for the fastest way to get started!
+
+### Docker (Recommended)
+
+```bash
+git clone https://github.com/EliasL-git/Collabio.git
+cd Collabio
+export NEXTAUTH_SECRET=$(openssl rand -base64 32)
+docker-compose up -d
+```
+
+Visit [http://localhost:3000](http://localhost:3000)
 
 ## Getting Started
 
