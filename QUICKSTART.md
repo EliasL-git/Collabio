@@ -45,7 +45,7 @@ docker-compose up -d
 
 **⚠️ IMPORTANT:** Change these passwords immediately after first login!
 
-## Option 2: Local Development
+## Option 2: Local Development (Interactive Setup)
 
 ### Prerequisites
 - Node.js 20+
@@ -70,24 +70,24 @@ createdb collabio
 psql -U postgres -c "CREATE DATABASE collabio;"
 ```
 
-3. Configure environment:
+3. Run the interactive setup wizard:
 ```bash
-cp .env.example .env
-# Edit .env with your database credentials
+npm run setup
 ```
 
-4. Run the setup script:
-```bash
-chmod +x scripts/setup.sh
-./scripts/setup.sh
-```
+The wizard will guide you through:
+- ✅ Database configuration check
+- ✅ Prisma Client generation
+- ✅ Database connection test
+- ✅ Running migrations
+- ✅ Creating your admin account
 
-5. Start the development server:
+4. Start the development server:
 ```bash
 npm run dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000)
+5. Open [http://localhost:3000](http://localhost:3000)
 
 ## Next Steps
 

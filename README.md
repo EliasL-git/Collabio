@@ -49,6 +49,40 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ### Installation
 
+#### Option 1: Interactive Setup (Recommended)
+
+1. Clone the repository:
+```bash
+git clone https://github.com/EliasL-git/Collabio.git
+cd Collabio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the interactive setup:
+```bash
+npm run setup
+```
+
+The setup wizard will:
+- ✅ Check database configuration
+- ✅ Generate Prisma Client
+- ✅ Test database connection
+- ✅ Run migrations
+- ✅ Guide you through creating an admin account
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to see the application.
+
+#### Option 2: Manual Setup
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/EliasL-git/Collabio.git
