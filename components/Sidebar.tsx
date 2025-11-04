@@ -54,10 +54,17 @@ export default function Sidebar() {
             </h3>
             <Link
               href="/admin/permissions"
-              className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white transition-colors"
+              className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white transition-colors mb-1"
             >
               <span className="text-xl">⚙️</span>
               <span>Permissions</span>
+            </Link>
+            <Link
+              href="/admin/migrations"
+              className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white transition-colors"
+            >
+              <span className="text-xl">🔄</span>
+              <span>Migrations</span>
             </Link>
           </div>
         )}

@@ -9,6 +9,8 @@ export default function TopBar() {
     if (pathname === '/dashboard') return 'Dashboard'
     if (pathname.includes('/notes')) return 'Notes'
     if (pathname.includes('/markdown-studio')) return 'Markdown Studio'
+    if (pathname.includes('/admin/migrations')) return 'Database Migrations'
+    if (pathname.includes('/admin/permissions')) return 'User Permissions'
     if (pathname.includes('/admin')) return 'Admin Panel'
     return 'Collabio'
   }
