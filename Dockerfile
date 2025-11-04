@@ -14,6 +14,11 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# Use a dummy DATABASE_URL for build time (required by Prisma)
+# The actual DATABASE_URL will be provided at runtime
+ARG DATABASE_URL="postgresql://user:password@localhost:5432/collabio?schema=public"
+ENV DATABASE_URL=$DATABASE_URL
+
 # Generate Prisma Client
 RUN npx prisma generate
 
