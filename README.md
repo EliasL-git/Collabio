@@ -106,6 +106,7 @@ Create a `.env` file in the root directory with the following:
 DATABASE_URL="postgresql://user:password@localhost:5432/collabio?schema=public"
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="your-secret-key-change-this-in-production-min-32-characters-long"
+PORT=3000
 ```
 
 4. Run database migrations:
@@ -146,6 +147,7 @@ Or create a `.env` file:
 DATABASE_URL="postgresql://user:password@your-db-host:5432/collabio?schema=public"
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="your-secret-key-change-this-in-production-min-32-characters-long"
+PORT=3000
 ```
 
 2. Start the container:
