@@ -17,8 +17,10 @@ A modern workspace platform built with Next.js, PostgreSQL, and TypeScript - an 
 - **Frontend**: Next.js 14 (App Router), React, TypeScript, Tailwind CSS
 - **Backend**: Next.js API Routes
 - **Database**: PostgreSQL with Prisma ORM
-- **Authentication**: NextAuth.js v5
+- **Authentication**: NextAuth.js v5 (beta - required for Next.js App Router support)
 - **Containerization**: Docker & Docker Compose
+
+> **Note:** This project uses NextAuth.js v5 (beta) which is required for Next.js 14+ App Router compatibility. The beta version is stable enough for production use with the App Router.
 
 ## Getting Started
 
