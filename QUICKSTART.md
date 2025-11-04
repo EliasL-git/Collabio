@@ -38,7 +38,10 @@ Alternatively, create a `.env` file in the project root:
 DATABASE_URL="postgresql://user:password@your-db-host:5432/collabio?schema=public"
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="your-secret-key-change-this-in-production-min-32-characters-long"
+PORT=3000
 ```
+
+**Note:** If port 3000 is already in use, change the `PORT` value to an available port (e.g., `PORT=3001`).
 
 3. Start the application:
 ```bash
@@ -143,7 +146,8 @@ After logging in:
 
 ### Docker Issues
 - Run `docker-compose logs` to see error messages
-- Ensure port 3000 is not in use
+- **Port already in use**: If you see "port is already allocated" error, change the `PORT` value in your `.env` file to an available port (e.g., `PORT=3001`)
+- Ensure port 3000 (or your configured PORT) is not in use
 - Try `docker-compose down` then `docker-compose up -d`
 - Check that DATABASE_URL and NEXTAUTH_SECRET environment variables are set
 
