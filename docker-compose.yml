@@ -12,6 +12,7 @@ services:
       DATABASE_URL: "${DATABASE_URL:?DATABASE_URL environment variable is required}"
       NEXTAUTH_URL: "${NEXTAUTH_URL:-http://localhost:3000}"
       NEXTAUTH_SECRET: "${NEXTAUTH_SECRET:?NEXTAUTH_SECRET environment variable is required}"
-      PORT: "${PORT:-3000}"
+      # Force container to always use port 3000 internally
+      PORT: "3000"
     command: sh -c "npx prisma migrate deploy && node server.js"
 
