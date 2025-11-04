@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { useSession } from "next-auth/react"
 
 interface Note {
   id: string
@@ -12,7 +11,6 @@ interface Note {
 }
 
 export default function Notes() {
-  const { data: session } = useSession()
   const [notes, setNotes] = useState<Note[]>([])
   const [selectedNote, setSelectedNote] = useState<Note | null>(null)
   const [title, setTitle] = useState("")

@@ -38,6 +38,7 @@ export default function PermissionsPage() {
       return
     }
     fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session])
 
   const fetchData = async () => {

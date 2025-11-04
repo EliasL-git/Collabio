@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { useSession } from "next-auth/react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 
@@ -14,7 +13,6 @@ interface Document {
 }
 
 export default function MarkdownStudio() {
-  const { data: session } = useSession()
   const [documents, setDocuments] = useState<Document[]>([])
   const [selectedDoc, setSelectedDoc] = useState<Document | null>(null)
   const [title, setTitle] = useState("")
